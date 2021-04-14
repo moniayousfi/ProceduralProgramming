@@ -1,0 +1,55 @@
+
+// Function dot_product
+
+
+Function dotProduct(vector1:array_of_integer[10], vector2:array_of_integer[10]){
+    VAR
+    result:integer = 0;
+    i:integer;
+BEGIN
+    FOR i FROM 0 to length vector1 step1 do
+        result += vector1[i] * vector2[i]
+    END_FOR
+    return result
+END
+  
+
+// Procedure dot_product
+Procedure(vectA:array_of_integer[10] ,vect B:array_of_integer[10])
+
+VAR
+
+i:integer;
+product :integer = 0;
+BEGIN
+FOR i FROM 1  TO length vectA step 1 DO 
+product = product + vectA[i]*vectB[i];
+END_FOR
+Write(product);
+
+END
+// Algorithm 
+
+Algorithm DotProduct
+
+VAR
+
+vect1 :array_of_integer[10];
+vect2 :array_of_integer[10];
+
+BEGIN
+
+let vectors = [[7, 1, 1],[6, 0, 2], [5, 7, 0], [3, 1, 2], [2, 3 ,8], [0, 0, 0]];
+
+FOR i FROM 1 TO length vectors step 1 DO
+FOR J FROM i+1 TO length vectors step1 DO
+    IF(dot_product(vectors[i], vectors[j]) === 0){
+          write(`${vectors[i]} and ${vectors[j]} are orthogonal `)
+    END_IF
+
+END_FOR
+END_FOR
+
+
+END
+
